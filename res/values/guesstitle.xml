@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="guess_title_01">野球拳王子</string>
+    <string name="guess_title_02">无敌猜拳</string>
+    <string name="guess_title_03">百胜将军</string>
+    <string name="guess_title_04">青山不倒</string>
+    <string name="guess_title_05">未卜先知</string>
+    <string name="guess_title_06">隐世高人</string>
+    <string name="guess_title_07">独孤拳侠</string>
+    <string name="guess_title_08">拼命拳棍</string>
+    
+    <string name="guess_title_play_01">猜拳野人</string>
+    <string name="guess_title_play_02">菜鸟小丸子</string>
+    <string name="guess_title_play_03">猜拳前辈</string>
+    <string name="guess_title_play_04">野球拳掌门</string>
+    <string name="guess_title_play_05">猜拳高人</string>
+    <string name="guess_title_play_06">常胜将军</string>
+    <string name="guess_title_play_07">擒鸭拳</string>
+    <string name="guess_title_play_08">拳法不倒</string>
+    <string name="guess_title_play_09">猜拳悟道</string>
+    <string name="guess_title_play_10">伏虎拳法</string>
+    <string name="guess_title_play_11">降龙猜拳</string>
+    <string name="guess_title_play_12">一代宗师</string>
+    <string name="guess_title_play_13">拳在心中</string>
+    <string name="guess_title_play_14">无拳胜有拳</string>
+    <string name="guess_title_play_15">独孤求败</string>
+    <string name="guess_title_play_default">黯然销魂</string>
+</resources>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <!--  android:background="@drawable/guessgame_bg"-->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dip"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/guessgame_activity_iv_imageshow"
+            android:layout_width="100dip"
+            android:layout_height="120dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="2dip"
+            android:background="@drawable/test_result_mood_001" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_namedis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="15dip"
+            android:layout_toRightOf="@+id/guessgame_activity_iv_imageshow"
+            android:text="对手名称:"
+            android:textColor="#FF0000"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="15dip"
+            android:layout_toRightOf="@+id/guessgame_activity_tv_namedis"
+            android:text="刀疤鸭 "
+            android:textColor="#FF0000"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_titledis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guessgame_activity_tv_namedis"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@+id/guessgame_activity_iv_imageshow"
+            android:text="江湖称号: "
+            android:textColor="#FF0000"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guessgame_activity_tv_namedis"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@+id/guessgame_activity_tv_titledis"
+            android:text="千王之王 "
+            android:textColor="#FF0000"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/guessgame_activity_iv_duak_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/guessgame_activity_iv_vs"
+            android:background="@drawable/guessgame_fist" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/guessgame_activity_iv_vs"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/guessgame_vs" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/guessgame_activity_iv_play_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/guessgame_activity_iv_vs"
+            android:background="@drawable/guessgame_fist" >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guessgame_activity_iv_duak_choose"
+            android:layout_toLeftOf="@+id/guessgame_activity_iv_vs" >
+
+            <TextView
+                android:id="@+id/guessgame_activity_tv_duak_antedis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="刀疤鸭下注： "
+                android:textColor="#FF0000"
+                android:textSize="18sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/guessgame_activity_tv_duak_ante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/guessgame_activity_tv_duak_antedis"
+                android:text="0"
+                android:textColor="#FF0000"
+                android:textSize="18sp" >
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guessgame_activity_iv_play_choose"
+            android:layout_toRightOf="@+id/guessgame_activity_iv_vs" >
+
+            <TextView
+                android:id="@+id/guessgame_activity_tv_play_antedis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="挑战者下注: "
+                android:textColor="#FF0000"
+                android:textSize="18sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/guessgame_activity_tv_play_ante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/guessgame_activity_tv_play_antedis"
+                android:text="0"
+                android:textColor="#FF0000"
+                android:textSize="18sp" >
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="1" >
+
+        <View
+            android:id="@+id/guessgame_activity_v_center"
+            android:layout_width="1dip"
+            android:layout_height="1dip"
+            android:layout_centerHorizontal="true" >
+        </View>
+
+        <ImageButton
+            android:id="@+id/guessgame_activity_ib_cloth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dip"
+            android:layout_toLeftOf="@+id/guessgame_activity_ib_fist"
+            android:src="@drawable/guessgame_cloth_icon" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/guessgame_activity_ib_fist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/guessgame_activity_v_center"
+            android:src="@drawable/guessgame_fist_icon" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/guessgame_activity_ib_shears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="20dip"
+            android:layout_toRightOf="@+id/guessgame_activity_v_center"
+            android:src="@drawable/guessgame_shears_icon" >
+        </ImageButton>
+
+        <Button
+            android:id="@+id/guessgame_activity_b_ante"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_gravity="right"
+            android:layout_toRightOf="@+id/guessgame_activity_ib_shears"
+            android:text="下注 " >
+        </Button>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_scoredis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_toLeftOf="@+id/guessgame_activity_tv_score"
+            android:text="剩余积分： "
+            android:textColor="#FF0000"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_toLeftOf="@+id/guessgame_activity_v"
+            android:text="网络错误 "
+            android:textColor="#FF0000"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_play_titledis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_toRightOf="@+id/guessgame_activity_v"
+            android:text="江湖称号： "
+            android:textColor="#FF0000"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/guessgame_activity_tv_play_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/guessgame_activity_tv_play_titledis"
+            android:text="猜拳野人 "
+            android:textColor="#FF0000"
+            android:textSize="15sp" >
+        </TextView>
+
+        <View
+            android:id="@+id/guessgame_activity_v"
+            android:layout_width="1dip"
+            android:layout_height="1dip"
+            android:layout_centerHorizontal="true" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guessgame_activity_tv_scoredis"
+            android:layout_marginBottom="5dip" >
+
+            <Button
+                android:id="@+id/guessgame_activity_b_start"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_toLeftOf="@+id/guessgame_activity_b_morescore"
+                android:layout_weight="1"
+                android:text="     开始     " >
+            </Button>
+
+            <Button
+                android:id="@+id/guessgame_activity_b_morescore"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:text="更多免费积分 " >
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
