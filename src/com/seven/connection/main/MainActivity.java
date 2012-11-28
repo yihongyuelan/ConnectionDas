@@ -16,6 +16,7 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,13 +26,13 @@ import com.seven.game.differencessolver.DifferencesSolver;
 public class MainActivity extends Activity{
 	private static final String TAG = "chat.Connection";
 	
-//	private Button mSearchGroupButton;
-//	private Button mCreateGroupButton;
 	private Context mContext;
 	private Utils mUtils;
 	private TextView gameTextView;
 	private ChatApplication mApp;
-    private long waitTime = 2000;
+	private Button mCreateButton;
+	private Button mSearchButton;
+    private long waitTime = 2000;//twice press then exit
     private long touchTime = 0;
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -40,31 +41,13 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.conn_main);
 
 		// add by man.tang
-		mUtils = new Utils(this);
-		mContext = this;
-		mApp = (ChatApplication) getApplication();
-		gameTextView = (TextView) findViewById(R.id.gameTV);
-		gameTextView.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, DifferencesSolver.class);
-				startActivity(intent);
-			}
-		});
+		init();
 
 //		mSearchGroupButton = (Button) findViewById(R.id.searchGroup);
 //		mSearchGroupButton.setOnClickListener(new View.OnClickListener() {
 //			public void onClick(View v) {
 //				// start search
 //				new SearchGroupTask().execute(20000);
-//			}
-//		});
-//
-//		mCreateGroupButton = (Button) findViewById(R.id.createGroup);
-//		mCreateGroupButton.setOnClickListener(new View.OnClickListener() {
-//			public void onClick(View v) {
-//				// this thread is use to create a new connection group
-//				new CreateGroupTask().execute(5000);
 //			}
 //		});
 
@@ -80,6 +63,39 @@ public class MainActivity extends Activity{
 //			}
 //		}).start();
 	}
+	
+	private void init(){
+		mUtils = new Utils(this);
+		mContext = MainActivity.this;
+		mApp = (ChatApplication) getApplication();
+		gameTextView = (TextView) findViewById(R.id.gameTV);
+		mCreateButton = (Button) findViewById(R.id.createConBtn);
+		mSearchButton = (Button) findViewById(R.id.searchConBtn);
+		gameTextView.setOnClickListener(mClickListener);
+		mCreateButton.setOnClickListener(mClickListener);
+		mSearchButton.setOnClickListener(mClickListener);
+	}
+	
+	OnClickListener mClickListener = new OnClickListener() {		
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.gameTV:
+				Intent intent = new Intent();
+				intent.setClass(mContext, DifferencesSolver.class);
+				startActivity(intent);
+				break;
+			case R.id.createConBtn:
+				mSearchButton.setEnabled(false);
+				// this thread is use to create a new connection group
+				new CreateGroupTask().execute(5000);
+				break;
+			case R.id.searchConBtn:
+				break;
+			default:
+				break;
+			}
+		}
+	};
 	
 	@Override
 	public void onBackPressed() {

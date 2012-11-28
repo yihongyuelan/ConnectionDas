@@ -8,17 +8,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/common_connect_bg"
-        android:layout_weight="1"
-        android:paddingTop="5dp">
+        android:layout_weight="1">
 
         <Button
-            android:id="@+id/searchButton"
-            android:layout_width="183dp"
-            android:layout_height="63dp"
-            android:layout_centerHorizontal="true"
+            android:id="@+id/createConBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/common_connect_addfriends_bg"
             android:padding="5dp"
-            android:text="search" />
+            android:layout_alignParentLeft="true"
+            android:text="@string/con_create" />
+        
+        <Button
+            android:id="@+id/searchConBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_connect_addfriends_bg"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/con_search" />
 
     </RelativeLayout>
 

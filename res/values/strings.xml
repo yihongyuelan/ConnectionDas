@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AllJoyn Chat Sample for Android</string>
+    <string name="app_name">ConnectionDas</string>
+    <string name="con_create">Create</string>
+    <string name="con_search">Search</string>
 </resources>
