@@ -8,3 +8,7 @@ This app can communicate with each other easily.
 Let's begin.
 
 27/11/2012
+
+Removed the /gen and /bin directory.
+
+28/11/2012
